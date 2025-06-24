@@ -1,5 +1,4 @@
 
-
 ## Highlights
 Tags: [[Distributed Systems]], [[Database]], [[Books]]
 Chapter 01: Reliable, Scalable, and Maintainable Applications
