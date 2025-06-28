@@ -8,7 +8,9 @@
 
 [Go Web Programming](https://www.manning.com/books/go-web-programming)
 
+[I Heart Logs](https://www.oreilly.com/library/view/i-heart-logs/9781491909379/)
 
+[The Unicorn Project](https://itrevolution.com/product/the-unicorn-project/)
 # Papers
 
 
