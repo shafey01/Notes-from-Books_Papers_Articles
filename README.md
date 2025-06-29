@@ -13,7 +13,7 @@
 [The Unicorn Project](https://itrevolution.com/product/the-unicorn-project/)
 # Papers
 
-
+[Kafka: a Distributed Messaging System for Log Processing](https://notes.stephenholiday.com/Kafka.pdf)
 
 # Articles
 
