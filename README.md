@@ -11,6 +11,9 @@
 [I Heart Logs](https://www.oreilly.com/library/view/i-heart-logs/9781491909379/)
 
 [The Unicorn Project](https://itrevolution.com/product/the-unicorn-project/)
+
+[The Site Reliability Workbook](https://lrita.github.io/images/posts/com/the-site-reliability-workbook-next18.pdf)
+
 # Papers
 
 [Kafka: a Distributed Messaging System for Log Processing](https://notes.stephenholiday.com/Kafka.pdf)
