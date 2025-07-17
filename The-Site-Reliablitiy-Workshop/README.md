@@ -354,3 +354,57 @@
  * Page 173 (Conclusion):
    > We've  also  found  that  making  all  members  of  the  on-call  rotation  sit  together, regardless of job title and function area, helps improve team relations tremendously. Encourage teams to eat lunch with each other. Don't underestimate the power of rel‐ atively straightforward changes like these. It plays directly into team dynamics.
 
+ * Page 175 (Chapter 9. Incident Response): "The  basic  principles  of  incident  response include the following:"
+
+ * Page 176 (Incident Command System):
+   > • Maintain a clear line of command. • Designate clearly defined roles. • Keep a working record of debugging and mitigation as you go. • Declare incidents early and often.
+
+ * Page 176 (Incident Command System):
+   > Incident  response  frameworks  have  three  common  goals,  also  known  as  the  "three Cs" (3Cs) of incident management: • Coordinate response effort. • Communicate between incident responders, within the organization, and to the outside world. • Maintain control over the incident response.
+
+ * Page 180 (Case Study 2: Service Fault—Cache Me If You Can):
+   > we  should  have  conducted  rollouts  during  business  hours  or  organized  an on-call rotation that provided paid coverage outside of business hours.
+
+ * Page 180 (Case Study 2: Service Fault—Cache Me If You Can):
+   > Declaring  an  incident early ensures that: • Miscommunication between the client and server developers is prevented. • Root-cause identification and incident resolution occur sooner. • Relevant teams are looped in earlier, making external communications faster and smoother.
+
+ * Page 185 (Case Study 3: Power Outage—Lightning Never Strikes Twice…Until It Does):
+   > It's important to remember that first responders must prioritize mitigation above all else, or time to resolution suffers. Having a generic mitigation in place, such as roll‐ back and drain, speeds recovery and leads to happier customers. Ultimately, custom‐ ers  do  not  care  whether  or  not  you  fully  understand  what  caused  an  outage.  What they want is to stop receiving errors.
+
+ * Page 185 (Case Study 3: Power Outage—Lightning Never Strikes Twice…Until It Does):
+   > With mitigation as top priority, an active incident should be addressed as follows: 1. Assess the impact of the incident. 2. Mitigate the impact. 3. Perform a root-cause analysis of the incident. 4. After the incident is over, fix what caused the incident and write a postmortem.
+
+ * Page 212 (Good Postmortem): "Why Is This Postmortem Better?"
+
+ * Page 212 (Good Postmortem):
+   > This postmortem exemplifies several good writing practices. Clarity The  postmortem  is  well  organized  and  explains  key  terms  in  sufficient  detail.  For example: Glossary A well-written glossary makes the postmortem accessible and comprehensible to a broad audience. Action items This  was  a  large  incident  with  many  action  items.  Grouping  action  items  by theme makes it easier to assign owners and priorities.
+
+ * Page 213 (Why Is This Postmortem Better?):
+   > Quantifiable metrics The  postmortem  presents  useful  data  on  the  incident,  such  as  cache  hit  ratios, traffic  levels,  and  duration  of  the  impact.  Relevant  sections  of  the  data  are  pre‐ sented  with  links  back  to  the  original  sources.  This  data  transparency  removes ambiguity and provides context for the reader. Concrete action items A postmortem with no action items is ineffective. These action items have a few nota‐ ble characteristics: Ownership All action items have both an owner and a tracking number. Prioritization All action items are assigned a priority level. Measurability The action items have a verifiable end state (e.g., "Add an alert when more than X% of our machines have been taken away from us"). Preventative action Each action item "theme" has Prevent/Mitigate action items that help avoid out‐ age  recurrence  (for  example,  "Disallow  any  single  operation  from  affecting servers spanning namespace/class boundaries"). Blamelessness The authors focused on the gaps in system design that permitted undesirable failure modes. For example: Things that went poorly No individual or team is blamed for the incident. Root cause and trigger Focuses on "what" went wrong, not "who" caused the incident. Action items Are aimed at improving the system instead of improving people. Depth Rather than only investigating the proximate area of the system failure, the postmor‐ tem explores the impact and system flaws across multiple teams. Specifically:
+
+ * Page 214 (Model and Enforce Blameless Behavior):
+   > Impact This  section  contains  lots  of  details  from  various  perspectives,  making  it  bal‐ anced and objective. Root cause and trigger This section performs a deep dive on the incident and arrives at a root cause and trigger. Data-driven conclusions All  of  the  conclusions  presented  are  based  on  facts  and  data.  Any  data  used  to arrive at a conclusion is linked from the document. Additional resources These  present  further  useful  information  in  the  form  of  graphs.  Graphs  are explained to give context to readers who aren't familiar with the system.
+
+ * Page 218 (Respond to Postmortem Culture Failures): "Respond to Postmortem Culture Failures"
+
+ * Page 218 (Respond to Postmortem Culture Failures): "Avoiding association"
+
+ * Page 219 (Respond to Postmortem Culture Failures): "Failing to reinforce the culture"
+
+ * Page 219 (Respond to Postmortem Culture Failures):
+   > the  following  statement  made  by  senior  leadership  at  a  meeting  about  an outage: VP  Ash:  I  know  we  are  supposed  to  be  blameless,  but  this  is  a  safe  space.  Someone must  have  known  beforehand  this  was  a  bad  idea,  so  why  didn't  you  listen  to  that person? Mitigate  the  damage  by  moving  the  narrative  in  a  more  constructive  direction.  For example: SRE  Dana:  Hmmm,  I'm  sure  everyone  had  the  best  intent,  so  to  keep  it  blameless, maybe we ask generically if there were any warning signs we could have heeded, and why we might have dismissed them.
+
+ * Page 219 (Respond to Postmortem Culture Failures): "Lacking time to write postmortems"
+
+ * Page 219 (Respond to Postmortem Culture Failures):
+   > Repeating incidents If  teams  are  experiencing  failures  that  mirror  previous  incidents,  it's  time  to  dig deeper. Consider asking questions like: • Are action items taking too long to close? • Is feature velocity trumping reliability fixes? • Are the right action items being captured in the first place? • Is the faulty service overdue for a refactor? • Are people putting Band-Aids on a more serious problem?
+
+ * Page 227 (Maglev):
+   > All packets destined for a given IP address can be evenly spread across a pool of Maglev  machines  via  Equal-Cost  Multi-Path  (ECMP)  forwarding
+
+ * Page 238 (Avoiding Overloading Backends):
+   > Including Kill Switches and Manual Overrides It's  a  good  idea  to  have  a  kill  switch  in  case  something  goes  wrong  with  your autoscaling. Make sure your on-call engineers understand how to disable autoscaling and  how  to  manually  scale  if  necessary.  Your  autoscaling  kill  switch  functionality should be easy, obvious, fast, and well documented.
+
+ * Page 239 (Combining Strategies to Manage Load):
+   > Or perhaps your data processing pipeline lives in a Kubernetes cluster in one cloud region. When data processing slows significantly, it provisions more pods to handle the work. However, when data comes in so fast that reading it causes you to run out of memory, or slows down garbage collection, your pods may need to shed that load temporarily or permanently. In this case, your system needs to use both load-based autoscaling and load shedding techniques.
+
